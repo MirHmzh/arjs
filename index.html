@@ -110,7 +110,7 @@ function initialize()
 
 	scene.add(markerRoot1);
 	let markerControls1 = new THREEx.ArMarkerControls(arToolkitContext, markerRoot1, {
-		type: 'pattern', patternUrl: "data/hiro.patt",
+		type: 'pattern', patternUrl: "data/flu.patt",
 	})
 
 	// let geometry1	= new THREE.SphereGeometry(0.5,32,32);
@@ -124,6 +124,7 @@ function initialize()
 	 	obj.scale.x = 0.5;
 		obj.scale.y = 0.5;
 		obj.scale.z = 0.5;
+		obj.position.y = 1;
 	 	markerRoot1.add( obj );
 	});
 	// var geometry = new THREE.CylinderBufferGeometry( 0.01, 0.01, 0.1, 32 );
