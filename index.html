@@ -106,38 +106,38 @@ function initialize()
 	////////////////////////////////////////////////////////////
 
 	// build markerControls
-// 	markerRoot = new THREE.Group();
+	markerRoot = new THREE.Group();
 
-// 	scene.add(markerRoot);
-// 	let markerControls = new THREEx.ArMarkerControls(arToolkitContext, markerRoot, {
-// 		type: 'pattern', patternUrl: "data/flu.patt",
-// 	})
+	scene.add(markerRoot);
+	let markerControls = new THREEx.ArMarkerControls(arToolkitContext, markerRoot, {
+		type: 'pattern', patternUrl: "data/flu.patt",
+	})
 	
-// 	var objectLoader = new THREE.ObjectLoader();
-// 	objectLoader.load( "models/influenza.json", function ( obj ) {
-// 	 	obj.scale.x = 0.5;
-// 		obj.scale.y = 0.5;
-// 		obj.scale.z = 0.5;
-// 		obj.position.y = 1;
-// 	 	markerRoot.add( obj );
-// 	});
+	var objectLoader = new THREE.ObjectLoader();
+	objectLoader.load( "models/influenza.json", function ( obj ) {
+	 	obj.scale.x = 0.5;
+		obj.scale.y = 0.5;
+		obj.scale.z = 0.5;
+		obj.position.y = 1;
+	 	markerRoot.add( obj );
+	});
 	
-	let patternArray = ["flu"];
-	for (let i = 0; i < patternArray.length; i++)
-	{
-		let markerRoot = new THREE.Group();
-		scene.add(markerRoot);
-		let markerControls = new THREEx.ArMarkerControls(arToolkitContext, markerRoot, {
-			type : 'pattern', patternUrl : "data/" + patternArray[i] + ".patt",
-		});
+// 	let patternArray = ["flu"];
+// 	for (let i = 0; i < patternArray.length; i++)
+// 	{
+// 		let markerRoot = new THREE.Group();
+// 		scene.add(markerRoot);
+// 		let markerControls = new THREEx.ArMarkerControls(arToolkitContext, markerRoot, {
+// 			type : 'pattern', patternUrl : "data/" + patternArray[i] + ".patt",
+// 		});
 	
-		let mesh = new THREE.Mesh( 
-			new THREE.CubeGeometry(1.25,1.25,1.25), 
-			new THREE.MeshBasicMaterial({color:colorArray[i], map:texture, transparent:true, opacity:0.5}) 
-		);
-		mesh.position.y = 1.25/2;
-		markerRoot.add( mesh );
-	}
+// 		let mesh = new THREE.Mesh( 
+// 			new THREE.CubeGeometry(1.25,1.25,1.25), 
+// 			new THREE.MeshBasicMaterial({color:colorArray[i], map:texture, transparent:true, opacity:0.5}) 
+// 		);
+// 		mesh.position.y = 1.25/2;
+// 		markerRoot.add( mesh );
+// 	}
 }
 
 
