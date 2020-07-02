@@ -107,7 +107,7 @@ function initialize()
 
 	// build markerControls
 	markerRoot1 = new THREE.Group();
-// 	markerRoot2 = new THREE.Group();
+	markerRoot2 = new THREE.Group();
 
 	scene.add(markerRoot1);
 	let markerControls1 = new THREEx.ArMarkerControls(arToolkitContext, markerRoot1, {
@@ -115,10 +115,10 @@ function initialize()
 	})
 	
 	
-// 	scene.add(markerRoot2);
-// 	let markerControls2 = new THREEx.ArMarkerControls(arToolkitContext, markerRoot2, {
-// 		type: 'pattern', patternUrl: "data/ebola.patt",
-// 	})
+	scene.add(markerRoot2);
+	let markerControls2 = new THREEx.ArMarkerControls(arToolkitContext, markerRoot2, {
+		type: 'pattern', patternUrl: "data/ebola.patt",
+	})
 
 	// let geometry1	= new THREE.SphereGeometry(0.5,32,32);
 	// let material1	= new THREE.MeshBasicMaterial( {color: 0xffff00} );
@@ -127,7 +127,7 @@ function initialize()
 	// markerRoot1.add( mesh1 );
 
 	var objectLoader = new THREE.ObjectLoader();
-	objectLoader.load( "models/flu.json", function ( obj ) {
+	objectLoader.load( "models/influenza.json", function ( obj ) {
 	 	obj.scale.x = 0.5;
 		obj.scale.y = 0.5;
 		obj.scale.z = 0.5;
@@ -136,14 +136,14 @@ function initialize()
 	});
 	
 	
-// 	var objectLoader2 = new THREE.ObjectLoader();
-// 	objectLoader2.load( "models/ebola.json", function ( obj ) {
-// 	 	obj.scale.x = 0.5;
-// 		obj.scale.y = 0.5;
-// 		obj.scale.z = 0.5;
-// 		obj.position.y = 1;
-// 	 	markerRoot2.add( obj );
-// 	});
+	var objectLoader2 = new THREE.ObjectLoader();
+	objectLoader2.load( "models/ebola.json", function ( obj ) {
+	 	obj.scale.x = 0.5;
+		obj.scale.y = 0.5;
+		obj.scale.z = 0.5;
+		obj.position.y = 1;
+	 	markerRoot2.add( obj );
+	});
 	// var geometry = new THREE.CylinderBufferGeometry( 0.01, 0.01, 0.1, 32 );
 	// var material = new THREE.MeshBasicMaterial( {color: 'white'} );
 	// var cylinder = new THREE.Mesh( geometry, material );
